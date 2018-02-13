@@ -26,7 +26,7 @@ namespace Superheroes
                 isVillain = false;
             }
             MyDbConnector.Execute($"INSERT INTO heroes (realname, superheroname, isvillain, power) VALUES ('{realName}', '{superheroName}', {isVillain}, '{power}');");
-            return RedirectToAction("ShowHeroes");
+            return RedirectToAction("/heroes");
         }
     }
 }
