@@ -17,3 +17,5 @@ This is a simple web application where you can enter superheroes and then add th
         - copy and paste the script found in the dbScript.sql file
         - execute the script by clicking on the lightning bolt (without the cursor or magnifying glass)
 5. Find all the bugs!
+
+*Notes: You should NOT have to modify the Program.cs file.*
