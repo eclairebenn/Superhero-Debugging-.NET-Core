@@ -1,5 +1,5 @@
 # Group Assignment: Debug This!
-This is a simple web application where you can enter superheroes and then add them to teams.
+This is a simple .NET Core 2.0 MVC application where you can enter superheroes and then add them to teams.
 ---
 1. Navigate to the folder where you'd like to download this assignment
 2. Make a copy of this assignment with this command:
@@ -18,4 +18,4 @@ This is a simple web application where you can enter superheroes and then add th
         - execute the script by clicking on the lightning bolt (without the cursor or magnifying glass)
 5. Find all the bugs!
 
-*Note: You should NOT have to modify the Program.cs or the database.*
+*Note: You should NOT have to modify the Program.cs file or the database.*
