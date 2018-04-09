@@ -1,8 +1,6 @@
 # Group Assignment: Debug This!
-===
 This is a simple web application where you can enter superheroes and then add them to teams.
 ---
-
 1. Navigate to the folder where you'd like to download this assignment
 2. Make a copy of this assignment with this command:
     - `git clone https://github.com/tehtertot/BuggyHeroes.git`
