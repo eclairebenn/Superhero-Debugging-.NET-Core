@@ -18,4 +18,4 @@ This is a simple web application where you can enter superheroes and then add th
         - execute the script by clicking on the lightning bolt (without the cursor or magnifying glass)
 5. Find all the bugs!
 
-*Notes: You should NOT have to modify the Program.cs file.*
+*Notes: You should NOT have to modify the Program.cs or the database.*
