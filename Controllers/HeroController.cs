@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using DbConnection;
 
 namespace Superheroes
 {
@@ -12,8 +13,8 @@ namespace Superheroes
         public IActionResult ShowHeroes() 
         {
             ViewBag.username = HttpContext.Session.GetString("username");
-            ViewBag.allTeams = MyDbConnector.Query("SELECT * FROM team");
-            ViewBag.allHeroes = MyDbConnector.Query("SELECT heroes.*, teams.name as teamname FROM heroes JOIN teams ON heroes.teamId=teams.teamId");
+            ViewBag.allTeams = MyDbConnector.Query("SELECT * FROM teams");
+            ViewBag.allHeroes = MyDbConnector.Query("SELECT heroes.*, teams.Name as teamname FROM heroes JOIN teams ON teams.TeamId = heroes.TeamId");
             return View("Index");
         }
 
@@ -25,8 +26,8 @@ namespace Superheroes
             if (villainCheck == null) {
                 isVillain = false;
             }
-            MyDbConnector.Execute($"INSERT INTO heroes (realname, superheroname, isvillain, power) VALUES ('{realName}', '{superheroName}', {isVillain}, '{power}');");
-            return RedirectToAction("/heroes");
+            MyDbConnector.Execute($"INSERT INTO heroes (realname, SuperheroName, isvillain, power, TeamId) VALUES ('{realName}', '{superheroName}', {isVillain}, '{power}', {team});");
+            return RedirectToAction("ShowHeroes");
         }
     }
 }

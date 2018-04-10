@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
 namespace Superheroes
 {
     public class HomeController : Controller
@@ -6,7 +9,7 @@ namespace Superheroes
         [Route("")]
         public IActionResult Home()
         {
-            return View();
+            return View("Index");
         }
 
         [HttpGet]

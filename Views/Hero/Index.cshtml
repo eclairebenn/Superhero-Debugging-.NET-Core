@@ -15,7 +15,7 @@
 {
     <tr>
         <td>@hero["RealName"]</td>
-        <td>@hero["superName"]</td>
+        <td>@hero["SuperheroName"]</td>
         <td>@hero["Power"]</td>
         <td>@hero["teamname"]</td>
         <td>@hero["IsVillain"]</td>
@@ -28,12 +28,12 @@
 
 <h1>Add a Superhero</h1>
 
-<form action="/heroes/adds" method="post">
+<form action="/heroes/add" method="post">
     <label>Real Name:</label>
     <input type="text" name="realName">
     
     <label>Superhero Name:</label>
-    <input type="text" name="superName">
+    <input type="text" name="superheroName">
 
     <label>Power:</label>
     <input type="text" name="power">
@@ -43,9 +43,9 @@
 
     <label>Team:</label>
     <select name="team">
-        @foreach(var t in ViewBag.allTeams)
+        @foreach(var team in ViewBag.allTeams)
         {
-            <option value="@team">@team.Name</option>
+            <option value='@team["TeamId"]'>@team["Name"]</option>
         }
     </select>
     

@@ -6,20 +6,21 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Superheroes.Models;
+using DbConnection;
 
 namespace Superheroes.Controllers
 {
     public class TeamController : Controller
     {
         [HttpGet]
-        [Route("")]
+        [Route("teams")]
         //render a page that shows all the teams in the database
         //and allows the user to add a new team
         public IActionResult Index()
         {
             ViewBag.username = HttpContext.Session.GetString("name");
             ViewBag.allTeams = MyDbConnector.Query("SELECT * FROM teams;");
-            return View();
+            return View("Index");
         }
 
         [HttpPost]

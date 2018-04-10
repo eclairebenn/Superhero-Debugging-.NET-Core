@@ -4,7 +4,7 @@
 
 <h1>Current Teams</h1>
 <ul>
-@foreach(var team in ViewBag.teams)
+@foreach(var team in ViewBag.allTeams)
 {
     <li>@team["Name"]</li>
 }
@@ -14,8 +14,8 @@
 
 <h1>Add a Superhero Team</h1>
 
-<form action="/teams/add">
+<form action="/teams/add" method="post">
     <label>Team Name:</label>
     <input class="form-control" type="text" name="name">
-    <button class="btn btn-success">Add</button>
+    <button type="input" class="btn btn-success">Add</button>
 </form>
